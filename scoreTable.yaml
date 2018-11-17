@@ -1,0 +1,202 @@
+10*10:
+  4:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  5:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  6:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  7:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  8:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  9:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  10:
+  - {name: wedrfv, score: 22}
+  - {name: wedrfv, score: 22}
+  - {name: wedrfv, score: 22}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+3*3:
+  2:
+  - {name: klokloklo, score: 34}
+  - {name: hhhhhh, score: 34}
+  - {name: hhhhhh, score: 34}
+  - {name: hhhhhh, score: 34}
+  - {name: hhhhhh, score: 34}
+  - {name: hhhhhh, score: 34}
+  - {name: hhhhhh, score: 34}
+  - {name: hhhhhh, score: 34}
+  3:
+  - {name: kokoko, score: 14}
+  - {name: jkjkjk, score: 2}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  4:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  5:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  6:
+  - {name: ghjk, score: 3}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+5*5:
+  2:
+  - {name: ASDFGHJKL, score: 631}
+  - {name: QWER, score: 59}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  3:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  4:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  5:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  6:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+6*6:
+  2:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  3:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  4:
+  - {name: vgg, score: 0}
+  - {name: vgg, score: 0}
+  - {name: vgg, score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  5:
+  - {name: lol, score: 56}
+  - {name: lol, score: 56}
+  - {name: lol, score: 56}
+  - {name: erfghn, score: 54}
+  - {name: erfghn, score: 54}
+  - {name: erfghn, score: 54}
+  - {name: bbb, score: 45}
+  - {name: bbb, score: 45}
+  6:
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
