@@ -20,7 +20,7 @@ class Test(unittest.TestCase):
     def test_no_steps(self):
         board = b.FieldState(2, 2)
         board.board = [[1, 2], [2, 1]]
-        ans = board.no_steps()
+        ans = board.no_steps(board.board)
         self.assertEqual(True, ans)
 
     def test_shift_right(self):

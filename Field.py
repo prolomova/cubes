@@ -1,6 +1,8 @@
 import random
 from copy import deepcopy
 import functools
+from time import sleep
+import asyncio
 
 
 class Logic:
@@ -10,7 +12,7 @@ class Logic:
     def find_block(self, board, x, y, block = None):
         if not block:
             block = {(x, y)}
-        if len(board) <= x < 0 or 0 > y >= len(board[x]):
+        if len(board) <= x or x < 0 or 0 > y or y >= len(board[x]):
             return []
         for i, j in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
             if len(board) > i + x >= 0 \
@@ -33,11 +35,12 @@ class Logic:
 
 
 class FieldState:
-    def __init__(self, tbl_size, colors):
+    def __init__(self, height, width, colors):
         self.start_board = []
         self.score = 0
         self.colors_number = colors
-        self.tbl_size = tbl_size
+        self.height = height
+        self.width = width
         self.make_lighter = (False, [])
         self.board = []
         self.previous = []
@@ -66,14 +69,16 @@ class FieldState:
         self.init_board()
         self.count_blocks()
         self.start_board = deepcopy(self.board)
+        self.max_score = 0
+        self.stop_count = False
 
     def init_board(self):
-        for i in range(self.tbl_size):
+        for i in range(self.width):
             self.board.append([])
-            for j in range(self.tbl_size):
+            for j in range(self.height):
                 self.board[i].append(self.get_random_color())
-        if self.no_steps():
-            self.board[0][0] = self.board[0][1 % self.tbl_size]
+        if self.no_steps(self.board):
+            self.board[0][0] = self.board[0][1 % self.height]
         self.previous.append((deepcopy(self.board), deepcopy(self.score)))
         self.next = []
 
@@ -95,10 +100,10 @@ class FieldState:
     def get_random_color(self):
         return random.randint(1, self.colors_number)
 
-    def no_steps(self):
-        for i in range(len(self.board)):
-            for j in range(len(self.board[i])):
-                if len(self.logic.find_block(self.board, i, j)) >= 2:
+    def no_steps(self, board):
+        for i in range(len(board)):
+            for j in range(len(board[i])):
+                if len(self.logic.find_block(board, i, j)) >= 2:
                     return False
         return True
 
