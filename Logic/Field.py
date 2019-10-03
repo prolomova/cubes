@@ -1,15 +1,13 @@
 import random
 from copy import deepcopy
 import functools
-from time import sleep
-import asyncio
 
 
 class Logic:
     def __init__(self):
         pass
 
-    def find_block(self, board, x, y, block = None):
+    def find_block(self, board, x, y, block=None):
         if not block:
             block = {(x, y)}
         if len(board) <= x or x < 0 or 0 > y or y >= len(board[x]):
@@ -19,7 +17,7 @@ class Logic:
               and 0 <= j + y < len(board[i + x]):
                 if board[i + x][y + j] ==\
                         board[x][y] \
-                  and (i + x, y + j) not in block:
+                        and (i + x, y + j) not in block:
                     block.add((i + x, y + j))
                     self.find_block(board, i + x, j + y, block)
         return list(block)
@@ -37,6 +35,7 @@ class Logic:
 class FieldState:
     def __init__(self, height, width, colors):
         self.start_board = []
+        self.max_score = 0
         self.score = 0
         self.colors_number = colors
         self.height = height
@@ -48,6 +47,7 @@ class FieldState:
         self.is_started = False
         self.logic = Logic()
         self.rest_block = []
+        self.stop_calculating = False
 
     @functools.lru_cache()
     def count_score(self, n):
@@ -60,6 +60,7 @@ class FieldState:
         return self.count_score(n - 1) + self.count_score(n - 2)
 
     def start_game(self):
+        self.max_score = 0
         self.is_started = True
         self.score = 0
         self.make_lighter = (False, [])
@@ -69,8 +70,6 @@ class FieldState:
         self.init_board()
         self.count_blocks()
         self.start_board = deepcopy(self.board)
-        self.max_score = 0
-        self.stop_count = False
 
     def init_board(self):
         for i in range(self.width):
@@ -79,7 +78,8 @@ class FieldState:
                 self.board[i].append(self.get_random_color())
         if self.no_steps(self.board):
             self.board[0][0] = self.board[0][1 % self.height]
-        self.previous.append((deepcopy(self.board), deepcopy(self.score)))
+        self.previous.append(
+            (deepcopy(self.board), self.score, self.max_score))
         self.next = []
 
     def count_blocks(self):
@@ -96,7 +96,6 @@ class FieldState:
                     if len(block) >= 2:
                         self.rest_block[self.board[i][j] - 1] += 1
 
-
     def get_random_color(self):
         return random.randint(1, self.colors_number)
 
@@ -112,10 +111,30 @@ class FieldState:
             self.next.append(deepcopy(self.previous.pop()))
             previous = deepcopy(self.previous[-1])
             self.board = deepcopy(previous[0])
+            self.max_score = previous[2]
+            self.score = previous[1]
 
     def rendo(self):
         if len(self.next) >= 1 and self.is_started:
             next = deepcopy(self.next[-1])
+            self.previous.append(deepcopy(self.next.pop()))
             self.board = deepcopy(next[0])
             self.score = deepcopy(next[1])
-            self.previous.append(deepcopy(self.next.pop()))
+            self.max_score = deepcopy(next[2])
+
+    def count_possible_score(self, new_board, init_score):
+        while not self.stop_calculating:
+            board = deepcopy(new_board)
+            score = init_score
+            while not self.no_steps(board):
+                x = random.randint(0, len(board))
+                if x >= len(board):
+                    continue
+                y = random.randint(0, len(board[x]))
+                to_delete = self.logic.find_block(board, y, x)
+                if len(to_delete) >= 2:
+                    n = self.count_score(len(to_delete))
+                    self.logic.shift(board, to_delete)
+                    score += n
+                    self.max_score = max(self.max_score, score)
+            self.max_score = max(self.max_score, score)

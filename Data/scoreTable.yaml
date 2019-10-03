@@ -90,7 +90,7 @@
   - {name: '', score: 0}
   - {name: '', score: 0}
   - {name: '', score: 0}
-25*25:
+30*30:
   4:
   - {name: '', score: 0}
   - {name: '', score: 0}
@@ -156,14 +156,14 @@
   - {name: '', score: 0}
 6*6:
   2:
-  - {name: cc, score: 75054}
-  - {name: sc, score: 75044}
-  - {name: 3efv, score: 28717}
-  - {name: mk, score: 17808}
-  - {name: nm, score: 10971}
-  - {name: null, score: 6810}
-  - {name: ' ', score: 5779}
-  - {name: sdf, score: 4427}
+  - {name: null, score: 10980}
+  - {name: hjk, score: 8362}
+  - {name: null, score: 2592}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
+  - {name: '', score: 0}
   3:
   - {name: '', score: 0}
   - {name: '', score: 0}
@@ -174,7 +174,7 @@
   - {name: '', score: 0}
   - {name: '', score: 0}
   4:
-  - {name: mkl, score: 40}
+  - {name: '', score: 0}
   - {name: '', score: 0}
   - {name: '', score: 0}
   - {name: '', score: 0}
